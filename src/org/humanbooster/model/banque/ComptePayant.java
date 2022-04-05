@@ -2,15 +2,14 @@ package org.humanbooster.model.banque;
 
 public class ComptePayant extends Compte {
 
-    public ComptePayant() {
+    public ComptePayant(float solde) {
+        super(solde);
     }
 
     @Override
     public void verser(float montant) {
         if (montant > 1) {
             solde += montant - 1;
-        } else {
-            solde = 0;
         }
     }
 

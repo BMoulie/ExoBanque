@@ -4,7 +4,8 @@ public class CompteSimple extends Compte {
 
     private float decouvert;
 
-    public CompteSimple(float decouvert) {
+    public CompteSimple(float solde, float decouvert) {
+        super(solde);
         this.decouvert = decouvert;
     }
 

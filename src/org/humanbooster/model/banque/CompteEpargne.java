@@ -4,7 +4,8 @@ public class CompteEpargne extends Compte {
 
     private float taux;
 
-    public CompteEpargne(float taux) {
+    public CompteEpargne(float solde, float taux) {
+        super(solde);
         this.taux = taux;
     }
 

@@ -44,7 +44,7 @@ public class Main {
     }
 
     public static void testBanque() {
-        ComptePayant cpt = new ComptePayant();
+        ComptePayant cpt = new ComptePayant(0);
         cpt.verser(500);
         System.out.println(cpt);
         cpt.retirer(200);
@@ -52,7 +52,7 @@ public class Main {
         cpt.retirer(400);
         System.out.println(cpt);
 
-        CompteSimple cpt2 = new CompteSimple(200);
+        CompteSimple cpt2 = new CompteSimple(0,200);
         cpt2.verser(1000);
         System.out.println(cpt2);
     }
