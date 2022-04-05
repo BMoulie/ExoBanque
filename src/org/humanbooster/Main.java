@@ -45,6 +45,12 @@ public class Main {
         b2.start();
         c.start();
         b2.stop();
+
+        p.displayEngine();
+
+        System.out.println();
+
+        o.startAllVehicles();
     }
 
     public static void testWarGame() {

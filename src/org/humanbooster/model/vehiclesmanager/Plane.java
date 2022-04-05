@@ -16,4 +16,8 @@ public class Plane extends Vehicle {
         System.out.println("L'avion " + brand + " atterrit.");
     }
 
+    public void fly() {
+        System.out.println("L'avion " + brand + " vole dans les airs.");
+    }
+
 }

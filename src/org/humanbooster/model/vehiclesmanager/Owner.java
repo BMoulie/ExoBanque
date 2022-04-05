@@ -19,4 +19,16 @@ public class Owner {
     public void countByBrand(String brand) {
         System.out.println(vehicles.stream().filter(v -> v.brand.equals(brand)).count() + " véhicules de la marque " + brand + ".");
     }
+
+    public void startAllVehicles() {
+        for (Vehicle vehicle : vehicles) {
+            vehicle.start();
+            if (vehicle instanceof Boat) {
+                ((Boat) vehicle).sail();
+            } else if (vehicle instanceof Plane p) {
+                p.fly();
+            }
+        }
+    }
+
 }
