@@ -1,4 +1,4 @@
-package org.humanbooster.model;
+package org.humanbooster.model.banque;
 
 public class CompteEpargne extends Compte {
 
