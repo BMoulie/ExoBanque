@@ -15,5 +15,9 @@ public class Main {
         System.out.println(cpt);
         cpt.retirer(400);
         System.out.println(cpt);
+
+        CompteSimple cpt2 = new CompteSimple(200);
+        cpt2.verser(1000);
+        System.out.println(cpt2);
     }
 }
