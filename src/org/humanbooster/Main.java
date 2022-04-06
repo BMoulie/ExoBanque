@@ -2,6 +2,7 @@ package org.humanbooster;
 
 import org.humanbooster.model.banque.ComptePayant;
 import org.humanbooster.model.banque.CompteSimple;
+import org.humanbooster.model.banque.OpeBanqueException;
 import org.humanbooster.model.vehiclesmanager.Boat;
 import org.humanbooster.model.vehiclesmanager.Car;
 import org.humanbooster.model.vehiclesmanager.Owner;
@@ -13,7 +14,7 @@ import org.humanbooster.model.wargame.Wizard;
 public class Main {
 
     public static void main(String[] args) {
-        testVehicules();
+        testBanque();
     }
 
     public static void testVehicules() {
@@ -93,9 +94,17 @@ public class Main {
         cpt.retirer(400);
         System.out.println(cpt);
 
+        System.out.println();
+
         CompteSimple cpt2 = new CompteSimple(0,200);
         cpt2.verser(1000);
         System.out.println(cpt2);
+        try {
+            cpt2.retirer(5000);
+        } catch (OpeBanqueException e) {
+            System.out.println("Problème lors du retrait : " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
 }

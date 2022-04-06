@@ -15,10 +15,9 @@ public abstract class Compte {
         solde += montant;
     }
 
-    public void retirer(float montant) {
+    public void retirer(float montant) throws OpeBanqueException {
         if (montant > solde) {
-            System.out.println("Votre solde est de : " + solde + ".\nNous ne pouvons vous délivrer que cette somme.");
-            solde = 0;
+            throw new RetraitException("Solde insuffisant pour effectuer le ertrait.");
         } else {
             solde -= montant;
         }

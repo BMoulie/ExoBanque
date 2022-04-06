@@ -10,10 +10,9 @@ public class CompteSimple extends Compte {
     }
 
     @Override
-    public void retirer(float montant) {
+    public void retirer(float montant) throws OpeBanqueException {
         if (montant > solde + decouvert) {
-            System.out.println("Votre autoristion de découvert est de : " + solde + ".\nNous ne pouvons vous délivrer que cette somme en plus de votre solde qui est de : " + solde + ".");
-            solde = - decouvert;
+            throw new DecouvertException("Ce retrait excède votre découvert autorisé.");
         } else {
             solde -= montant;
         }
